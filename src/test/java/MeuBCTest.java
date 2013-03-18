@@ -38,5 +38,9 @@ public class MeuBCTest {
 		assertEquals("MeuBC.metodo1()", PilhaExecucao.retirar());
 		assertEquals("MeuBC__WeldProxy.metodo1()", PilhaExecucao.retirar());
 		assertEquals(true, PilhaExecucao.vazia());
+
+		// Porquê a chamada "MeuBC__WeldProxy.metodo2()" não ocorre??? Porque o "MeuBC.metodo1()" invoca diretamente o
+		// "MeuBC.metodo2()" sem passar pelo Proxy. A instância delegada simplesmente não conhece o Proxy, só o Proxy
+		// que conhece a instância delegada.
 	}
 }
