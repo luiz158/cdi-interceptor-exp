@@ -14,6 +14,8 @@ public class MeuBCTest {
 	 */
 	@Test
 	public void execucaoAtual() {
+		PilhaExecucao.limpar();
+
 		meuBC.metodo1();
 
 		assertEquals("MeuBC.metodo2()", PilhaExecucao.retirar());
@@ -21,14 +23,16 @@ public class MeuBCTest {
 		assertEquals("MeuBC__WeldProxy.metodo1()", PilhaExecucao.retirar());
 		assertEquals(true, PilhaExecucao.vazia());
 	}
-	
+
 	/**
 	 * Se você espera isto, perceba que o teste vai falhar.
 	 */
 	@Test
 	public void execucaoEsperadaPorVoce() {
+		PilhaExecucao.limpar();
+
 		meuBC.metodo1();
-		
+
 		assertEquals("MeuBC.metodo2()", PilhaExecucao.retirar());
 		assertEquals("MeuBC__WeldProxy.metodo2()", PilhaExecucao.retirar());
 		assertEquals("MeuBC.metodo1()", PilhaExecucao.retirar());
