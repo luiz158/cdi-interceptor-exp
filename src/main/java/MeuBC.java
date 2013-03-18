@@ -5,7 +5,7 @@
 public class MeuBC {
 
 	/**
-	 * Supondo que o metodo1 esteja anotado com @Transaction
+	 * Supondo que o metodo1 esteja anotado com @Transaction (ou qualquer outro interceptor)
 	 */
 	public void metodo1() {
 		PilhaExecucao.colocar("MeuBC.metodo1()");
@@ -13,7 +13,7 @@ public class MeuBC {
 	}
 
 	/**
-	 * Supondo que o metodo2 esteja anotado com @Transaction
+	 * Supondo que o metodo2 esteja anotado com @Transaction (ou qualquer outro interceptor)
 	 */
 	public void metodo2() {
 		PilhaExecucao.colocar("MeuBC.metodo2()");

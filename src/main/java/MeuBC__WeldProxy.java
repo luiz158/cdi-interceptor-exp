@@ -9,8 +9,9 @@ public class MeuBC__WeldProxy extends MeuBC {
 	private MeuBC delegate = new MeuBC();
 
 	/**
-	 * O Weld percebe que o método MeuBC.metodo1() possui a anotação @Transaction e incrementa código antes e depois da
-	 * chamada à instância real. Esta é uma explicação simplificada do seu funcionamento!
+	 * O Weld percebe que o método MeuBC.metodo1() possui a anotação @Transaction (ou qualquer outro interceptor) e
+	 * incrementa código antes e depois da chamada à instância real. Esta é apenas uma explicação simplificada do seu
+	 * funcionamento.
 	 */
 	@Override
 	public void metodo1() {
